@@ -1,0 +1,170 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dedede;
+}
+
+logo {
+    font-size: 35px;
+}
+
+space {
+    flex-grow: 1;
+}
+
+buttons {
+    display: flex;
+}
+
+buttons > a {
+    align-self: center;
+    padding: 10px 20px;
+    background: #39bfff;
+    color: #fff;
+    margin: 0px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.project {
+    border: 1px solid #dedede;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 10px !important;
+    padding: 0px 20px;
+}
+
+.topbar_name {
+    font-size: 25px;
+}
+
+.bottombar_description {
+    padding: 10px 20px;
+    color: #4c4c4c;
+    font-style: italic;
+}
+
+.content {
+    padding: 10px 20px;
+    margin: 0px 20px;
+}
+
+status {
+    border-radius: 50px;
+    background: #00cb00;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #00000091;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_box {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.popup_title {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.tinput {
+    border: 1px solid #dedede;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    outline: none;
+}
+
+select {
+    padding: 10px 20px;
+    border: 1px solid #dedede;
+    background: #efefefde;
+    outline: none;
+    margin: 10px 0px;
+}
+
+option {
+    padding: 10px 20px;
+    background: #fff;
+    outline: none;
+}
+
+.tinput:focus {
+    border: 1px solid #32b7ff;
+}
+
+select:focus {
+    border: 1px solid #32b7ff;
+}
+
+.popup_box > buttons > a {
+    margin: 0px;
+}
+
+.task {
+    border: 1px solid #dedede;
+    padding-top: 10px;
+    margin: 10px 0px;
+}
+
+.task-disabled {
+    display: none;
+}
+
+.gp {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.cross {
+    transform: rotate(45deg);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.bottombar {
+    display: none;
+}
+
+.bottombar.open {
+    display: initial;
+}
