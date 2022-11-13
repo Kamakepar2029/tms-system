@@ -1,0 +1,183 @@
+@import 'variables';
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    background: $background-color;
+}
+
+nav {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid $border-color;
+    background: $main-color;
+}
+
+logo {
+    font-size: 35px;
+}
+
+space {
+    flex-grow: 1;
+}
+
+buttons {
+    display: flex;
+}
+
+buttons > a {
+    align-self: center;
+    padding: 10px 20px;
+    background: $main-btn-color;
+    color: $main-color;
+    margin: 0px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.project {
+    width: 100%;
+    padding: 10px 0px;
+    background: $main-color;
+    border-radius: 5px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px !important;
+    padding: 0px 20px;
+    background: $main-color;
+}
+
+.topbar_name {
+    font-size: 25px;
+}
+
+.bottombar_description {
+    padding: 10px 20px;
+    color: $description-color;
+    font-style: italic;
+}
+
+.content {
+    padding: 10px 20px;
+    margin: 0px 20px;
+    background: $background-color;
+    border-radius: 5px;
+}
+
+status {
+    border-radius: 50px;
+    background: $main-opened-color;
+    padding: 10px 20px;
+    color: $main-color;
+}
+
+.popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #00000091;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_box {
+    display: flex;
+    flex-direction: column;
+    background: $main-color;
+    padding: 10px 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.popup_title {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.tinput {
+    border: 1px solid $border-color;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    outline: none;
+}
+
+select {
+    padding: 10px 20px;
+    border: 1px solid $border-color;
+    background: #efefefde;
+    outline: none;
+    margin: 10px 0px;
+}
+
+option {
+    padding: 10px 20px;
+    background: $main-color;
+    outline: none;
+}
+
+.tinput:focus {
+    border: 1px solid $main-btn-color;
+}
+
+select:focus {
+    border: 1px solid $main-btn-color;
+}
+
+.popup_box > buttons > a {
+    margin: 0px;
+}
+
+.task {
+    padding-top: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background: $main-color;
+}
+
+.task-disabled {
+    display: none;
+}
+
+.gp {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.cross {
+    transform: rotate(45deg);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.bottombar {
+    display: none;
+}
+
+.bottombar.open {
+    display: initial;
+}
+
+status[status="closed"] {
+    background: $main-closed-color;
+}
