@@ -73,7 +73,7 @@ buttons > a {
 
 status {
     border-radius: 50px;
-    background: #00cb00;
+    background: #ffaa0e;
     padding: 10px 20px;
     color: #fff;
 }
@@ -167,4 +167,8 @@ select:focus {
 
 .bottombar.open {
     display: initial;
+}
+
+status[status="closed"] {
+    background: #00c700;
 }

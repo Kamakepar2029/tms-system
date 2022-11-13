@@ -54,7 +54,7 @@ class TMSElement{
         if (this.type == 'project'){
             let topBar = document.createElement('div');
             topBar.classList.add('topbar');
-            topBar.innerHTML = `<div class="topbar_name">${name}</div><space></space><status onclick="changeStatus(this);" attrs="${attrs}">${status}</status><buttons><a class="openBottomBarBtn"  onclick="openBottomBar(this);" attrs="${attrs}">+</a></buttons>`;
+            topBar.innerHTML = `<div class="topbar_name">${name}</div><space></space><status status="${status}" onclick="changeStatus(this);" attrs="${attrs}">${status}</status><buttons><a class="openBottomBarBtn"  onclick="openBottomBar(this);" attrs="${attrs}">+</a></buttons>`;
             let bottomBar = document.createElement('div');
             bottomBar.classList.add('bottombar');
             bottomBar.innerHTML = `<div class="bottombar_description">${description}</div><div class="content"></div>`;
@@ -65,7 +65,7 @@ class TMSElement{
             let topBar = document.createElement('div');
             topBar.classList.add('topbar');
             this.htmlElement.classList.add(attrs.replaceAll('=', ''));
-            topBar.innerHTML = `<div class="topbar_name">${name}</div><space></space><status onclick="changeStatus(this);" attrs="${attrs}">${status}</status><buttons><a class="openBottomBarBtn"  onclick="openBottomBar(this);" attrs="${attrs.replaceAll('=', '')}">+</a></buttons>`;
+            topBar.innerHTML = `<div class="topbar_name">${name}</div><space></space><status status="${status}" onclick="changeStatus(this);" attrs="${attrs}">${status}</status><buttons><a class="openBottomBarBtn"  onclick="openBottomBar(this);" attrs="${attrs.replaceAll('=', '')}">+</a></buttons>`;
             let bottomBar = document.createElement('div');
             bottomBar.classList.add('bottombar');
             bottomBar.innerHTML = `<div class="bottombar_description">${description}</div><div class="content"></div>`;
@@ -86,5 +86,6 @@ class TMSElement{
 
     update(attribute, value){
         this.htmlElement.querySelector(attribute).innerHTML = value;
+        this.htmlElement.querySelector(attribute).setAttribute('status', value);
     }
 }
