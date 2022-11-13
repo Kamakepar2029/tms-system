@@ -34,8 +34,8 @@ buttons {
 buttons > a {
     align-self: center;
     padding: 10px 20px;
-    background: $main-btn-color;
-    color: $main-color;
+    color: $main-btn-color;
+    border: 1px solid $main-btn-color;
     margin: 0px 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -77,13 +77,18 @@ buttons > a {
     margin: 0px 20px;
     background: $background-color;
     border-radius: 5px;
+    border-bottom: 20px solid #fff;
+}
+
+.content.nocontent {
+    display: none;
 }
 
 status {
     border-radius: 50px;
-    background: $main-opened-color;
+    color: $main-opened-color;
     padding: 10px 20px;
-    color: $main-color;
+    border: 1px solid $main-opened-color;
 }
 
 .popup {
@@ -179,5 +184,6 @@ select:focus {
 }
 
 status[status="closed"] {
-    background: $main-closed-color;
+    color: $main-closed-color;
+    border: 1px solid $main-closed-color;
 }

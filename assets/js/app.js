@@ -32,6 +32,17 @@ const renderApp = function(){
         main.append(projectElement.htmlElement);
         tmsElements[tmsElements.length] = projectElement;
     }
+    let content = document.querySelectorAll('.content');
+    for (let con in content){
+        try{
+            let cont = content[con];
+            if (cont.innerText == ''){
+                cont.classList.add('nocontent');
+            }
+        }catch{
+            let y = error;
+        }
+    }
 }
 
 const initializeTaskPopup = function(type, element){
